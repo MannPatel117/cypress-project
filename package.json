@@ -1,0 +1,38 @@
+{
+  "name": "cypress-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ccypress": "node_modules\\.bin\\cypress open",
+    "headlessccypress": "node_modules\\.bin\\cypress run",
+    "recordccypress": "node_modules\\.bin\\cypress run --record --key af58a574-df33-45eb-b262-0240906481ea --reporter mochawesome --browser chrome"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@cypress/webpack-preprocessor": "^6.0.0",
+    "@types/neat-csv": "^5.1.1",
+    "@types/papaparse": "^5.3.14",
+    "mssql": "^10.0.1",
+    "mysql": "^2.18.1",
+    "neat-csv": "^7.0.0",
+    "papaparse": "^5.4.1",
+    "ts-loader": "latest",
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "@types/cypress": "^1.1.3",
+    "@types/mssql": "^9.1.4",
+    "@types/tedious": "^4.0.14",
+    "crypto-browserify": "^3.12.0",
+    "cypress": "^13.6.2",
+    "cypress-sql-server": "^1.0.0",
+    "mysql2": "^3.6.5",
+    "stream-browserify": "^3.0.0",
+    "tedious": "^16.6.1"
+  }
+}
