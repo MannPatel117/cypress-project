@@ -6,14 +6,27 @@
 trigger:
 - main
 
+parameters:
+  - name: script
+    displayName: Run Script
+    type: string
+    default: headlessccypress
+    values:
+    - headlessccypress
+    - recordccypress
+
+
 pool:
   vmImage: ubuntu-latest
 
+variables:
+- name: myscript
+  value: ${{parameters.script}}
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    npm install
+    npm run (variables.myscript)
+  displayName: 'Cypress Script'
